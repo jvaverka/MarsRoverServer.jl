@@ -1,4 +1,4 @@
-name = "WeatherServer"
+name = "MarsWeatherServer"
 uuid = "8ca99e8f-0b71-490a-9bc8-a95001f70202"
 authors = ["Jacob Vaverka <jacob.vaverka@juliacomputing.com>"]
 version = "0.1.0"

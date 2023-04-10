@@ -1,8 +1,8 @@
-using WeatherServer
+using MarsWeatherServer
 using HTTP
 using Oxygen
 
-@get "" () -> greet()
+@get "/" () -> greet()
 
 function auth_middleware(handler, args...)
     req -> handler(req, args...)
