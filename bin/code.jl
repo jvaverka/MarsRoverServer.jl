@@ -1,16 +1,16 @@
 # # Batch Script
 # Code to submit for batch job at scheduled intervals.
 
-using Dates
+using Dates: Date, Year, Month, Day, today
 using HTTP
 using MarsRoverServer: days_to_sols, find_photo
 
 const DEFAULT_IMG = 1
-const CURIOSITY_LAUNCH_DATE = Dates.Date(Year(2012), Month(8), Day(5))
+const CURIOSITY_LAUNCH_DATE = Date(Year(2012), Month(8), Day(5))
 
 # Find the number of mission sols for the rover based on yesterday's date.
 
-yesterday = Dates.today() - Day(1)
+yesterday = today() - Day(1)
 mission_days = yesterday - CURIOSITY_LAUNCH_DATE
 mission_sols = floor(Int, days_to_sols(mission_days))
 
